@@ -1,6 +1,6 @@
 {
-  "domain": "midea_ac_lan",
-  "name": "Midea AC LAN",
+  "domain": "midea_ac_lan_reminchev",
+  "name": "Midea AC LAN (Custom ReMinchev)",
   "codeowners": ["@wuwentao", "@rokam", "@chemelli74", "@Necroneco"],
   "config_flow": true,
   "dependencies": [],
