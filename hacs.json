@@ -1,6 +1,8 @@
 {
-  "name": "Midea AC LAN",
-  "homeassistant": "2023.8",
+  "name": "Midea AC LAN (ReMinchev Fix)",
+  "content_in_root": false,
+  "homeassistant": "2024.2.0",
+  "render_readme": true,
   "zip_release": true,
   "filename": "midea_ac_lan.zip"
 }
