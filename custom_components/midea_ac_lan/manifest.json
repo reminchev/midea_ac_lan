@@ -1,7 +1,13 @@
 {
   "domain": "midea_ac_lan",
   "name": "Midea AC LAN (ReMinchev Fix)",
-  "codeowners": ["@reminchev", "@wuwentao", "@rokam", "@chemelli74", "@Necroneco"],
+  "codeowners": [
+    "@reminchev",
+    "@wuwentao",
+    "@rokam",
+    "@chemelli74",
+    "@Necroneco"
+  ],
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/reminchev/midea_ac_lan#readme",
