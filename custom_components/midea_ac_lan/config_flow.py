@@ -26,7 +26,12 @@ from typing import TYPE_CHECKING, Any, cast
 
 import homeassistant.helpers.config_validation as cv
 import voluptuous as vol
-from homeassistant.config_entries import ConfigEntry, ConfigFlow, OptionsFlow
+from homeassistant.config_entries import (
+    ConfigEntry,
+    ConfigFlow,
+    ConfigFlowResult,
+    OptionsFlow,
+)
 from homeassistant.const import (
     CONF_CUSTOMIZE,
     CONF_DEVICE,
@@ -41,7 +46,6 @@ from homeassistant.const import (
     CONF_TOKEN,
     CONF_TYPE,
 )
-from homeassistant.config_entries import ConfigFlowResult
 from homeassistant.core import callback
 from homeassistant.helpers.aiohttp_client import async_create_clientsession
 from homeassistant.helpers.json import save_json
