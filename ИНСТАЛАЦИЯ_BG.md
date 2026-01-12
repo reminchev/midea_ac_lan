@@ -1,7 +1,9 @@
 # Инсталация на Midea AC LAN интеграция за Home Assistant 2026.1.1
 
 ## Проблем
+
 След актуализация на Home Assistant OS 2026.1.1, интеграцията дава грешка:
+
 ```
 Setup failed for custom integration 'midea_ac_lan': Requirements for midea_ac_lan not found: ['midea-local>=6.5.0']
 ```
@@ -15,6 +17,7 @@ Setup failed for custom integration 'midea_ac_lan': Requirements for midea_ac_la
    - Свържете се към Home Assistant
 
 2. **Инсталирайте midea-local пакета ръчно:**
+
    ```bash
    docker exec -it homeassistant /bin/bash
    pip install midea-local==6.5.0
@@ -38,6 +41,7 @@ git checkout b189730
 ### Метод 3: Изчистване на кеша
 
 1. **Изтрийте cache файловете:**
+
    ```bash
    rm -rf /config/custom_components/midea_ac_lan/__pycache__
    rm -rf /config/custom_components/midea_ac_lan/*/__pycache__
@@ -68,6 +72,7 @@ git checkout b189730
 ### Опция B: Пълна преинсталация
 
 1. **Премахнете интеграцията:**
+
    ```bash
    rm -rf /config/custom_components/midea_ac_lan
    ```
@@ -75,6 +80,7 @@ git checkout b189730
 2. **Копирайте отново файловете от този проект**
 
 3. **Уверете се че manifest.json съдържа:**
+
    ```json
    "requirements": ["midea-local>=6.5.0"],
    "version": "v0.6.11"
