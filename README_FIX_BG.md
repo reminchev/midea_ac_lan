@@ -12,6 +12,7 @@ Caused by: dns error: failed to lookup address information: Name does not resolv
 ### ✅ РЕШЕНИЕ 1: Поправи DNS (2 минути)
 
 **В Home Assistant UI:**
+
 1. Settings → System → Network
 2. Намери твоя network адаптер
 3. IPv4 Configuration → промени DNS:
@@ -24,6 +25,7 @@ Caused by: dns error: failed to lookup address information: Name does not resolv
 ### ✅ РЕШЕНИЕ 2: Премахни requirements (1 минута)
 
 **File Editor метод:**
+
 1. Отвори **File Editor** add-on
 2. Намери: `/config/custom_components/midea_ac_lan/manifest.json`
 3. Промени реда:
@@ -37,6 +39,7 @@ Caused by: dns error: failed to lookup address information: Name does not resolv
 4. Save
 
 **SSH метод:**
+
 ```bash
 cd /config/custom_components/midea_ac_lan
 cp manifest.json manifest.json.backup
@@ -45,6 +48,7 @@ nano manifest.json
 ```
 
 След това инсталирай пакета ръчно:
+
 ```bash
 docker exec -it homeassistant bash
 pip install git+https://github.com/rokam/midea-local.git@v6.5.0
@@ -98,6 +102,7 @@ curl -I https://pypi.org
 ```
 
 **Какво означават резултатите:**
+
 - ✅ ping работи, nslookup не работи = **DNS проблем** → РЕШЕНИЕ 1
 - ❌ нищо не работи = **Firewall/Router проблем** → Провери router
 - ✅ всичко работи = **Временен PyPI проблем** → РЕШЕНИЕ 2 или 3
@@ -130,6 +135,7 @@ curl -I https://pypi.org
 3. Отвори issue с log-овете: https://github.com/wuwentao/midea_ac_lan/issues
 
 Приложи тази информация:
+
 ```bash
 ha network info > /config/debug.txt
 cat /etc/resolv.conf >> /config/debug.txt

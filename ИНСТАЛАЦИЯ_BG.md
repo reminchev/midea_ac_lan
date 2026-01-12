@@ -2,9 +2,10 @@
 
 ## ⚠️ ВАЖНО - DNS/Мрежов проблем в HAOS 2026.1.1
 
-Има познат проблем с HAOS 2026.1.1 където Home Assistant не може да достигне PyPI (pythonhosted.org) за инсталация на пакети. 
+Има познат проблем с HAOS 2026.1.1 където Home Assistant не може да достигне PyPI (pythonhosted.org) за инсталация на пакети.
 
 **Грешката която виждате:**
+
 ```
 Unable to install package midea-local==6.5.0: error: Failed to fetch
 Caused by: dns error: failed to lookup address information: Name does not resolve
@@ -19,7 +20,7 @@ Caused by: dns error: failed to lookup address information: Name does not resolv
 3. **Променете DNS сървърите на:**
    - Primary DNS: `8.8.8.8` (Google DNS)
    - Secondary DNS: `8.8.4.4` (Google DNS)
-   
+
    или използвайте Cloudflare:
    - Primary DNS: `1.1.1.1`
    - Secondary DNS: `1.0.0.1`
@@ -58,11 +59,13 @@ pip install ./midea_local-6.5.0-py3-none-any.whl
 Ако нищо друго не работи, можете временно да премахнете requirements и да използвате системния Python пакет:
 
 1. **Редактирайте manifest.json:**
+
    ```json
    "requirements": [],
    ```
 
 2. **Инсталирайте midea-local в системата:**
+
    ```bash
    docker exec -it homeassistant bash
    apk add --no-cache git
@@ -84,6 +87,7 @@ nslookup pythonhosted.org
 ```
 
 Ако ping-овете не работят:
+
 1. Проверете Router настройките
 2. Проверете Firewall правилата
 3. Рестартирайте мрежовия адаптер на HAOS

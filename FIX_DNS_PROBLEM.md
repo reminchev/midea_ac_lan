@@ -1,6 +1,7 @@
 # БЪРЗА ПОПРАВКА ЗА DNS ПРОБЛЕМА
 
 ## Проблемът
+
 ```
 dns error: failed to lookup address information: Name does not resolve
 ```
@@ -70,6 +71,7 @@ Settings → System → Restart
 ## Проверка дали работи
 
 След рестартиране отидете на:
+
 - **Settings** → **Devices & Services**
 - Търсете за грешки свързани с midea_ac_lan
 - Ако няма червени грешки - работи! ✅
