@@ -20,6 +20,8 @@ job process:
 5. run `_save_device_config` and `async_create_entry`
 """
 
+from __future__ import annotations
+
 import logging
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, cast

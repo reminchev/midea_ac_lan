@@ -9,6 +9,8 @@ integration load process:
 3. unloading a config entry: `async_unload_entry`
 """
 
+from __future__ import annotations
+
 import logging
 from typing import Any, cast
 
