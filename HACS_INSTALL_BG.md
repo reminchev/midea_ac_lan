@@ -11,11 +11,13 @@
 ### Стъпка 1: Изтегли файловете
 
 **Опция А: През браузър**
+
 1. Отвори: https://github.com/reminchev/midea_ac_lan/archive/refs/heads/master.zip
 2. Изтегли zip файла
 3. Разархивирай
 
 **Опция Б: През git**
+
 ```bash
 git clone https://github.com/reminchev/midea_ac_lan.git
 ```
