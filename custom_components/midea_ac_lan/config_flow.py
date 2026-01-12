@@ -40,9 +40,8 @@ from homeassistant.const import (
     CONF_SWITCHES,
     CONF_TOKEN,
     CONF_TYPE,
-    MAJOR_VERSION,
-    MINOR_VERSION,
 )
+from homeassistant.config_entries import ConfigFlowResult
 from homeassistant.core import callback
 from homeassistant.helpers.aiohttp_client import async_create_clientsession
 from homeassistant.helpers.json import save_json
@@ -59,13 +58,6 @@ from midealocal.exceptions import SocketException
 
 if TYPE_CHECKING:
     from aiohttp import ClientSession
-
-if (MAJOR_VERSION, MINOR_VERSION) >= (2024, 4):
-    from homeassistant.config_entries import ConfigFlowResult  # pylint: disable=E0611
-else:
-    from homeassistant.data_entry_flow import (  # type: ignore[assignment]
-        FlowResult as ConfigFlowResult,
-    )
 
 from .const import (
     CONF_ACCOUNT,
