@@ -103,7 +103,6 @@ class MideaLanConfigFlow(ConfigFlow, domain=DOMAIN):  # type: ignore[call-arg]
     """
 
     VERSION = 2
-    MINOR_VERSION = 1
 
     def __init__(self) -> None:
         """MideaLanConfigFlow class."""

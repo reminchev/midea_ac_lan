@@ -1,6 +1,25 @@
 # 🔧 БЪРЗА ПОПРАВКА - Home Assistant 2026.1.1
 
-## Проблем: DNS грешка при инсталация
+## 🚨 КРИТИЧНИ ПРОБЛЕМИ В 2026.1.1
+
+### Проблем 1: Интеграцията спира да работи
+
+**Грешка:**
+```
+AttributeError: MINOR_VERSION
+Setup failed for custom integration 'midea_ac_lan'
+```
+
+**Причина:** Home Assistant 2026.1.1 премахна `MINOR_VERSION` от ConfigFlow API.
+
+**Решение:**
+```bash
+cd /config/custom_components/midea_ac_lan
+sed -i '/MINOR_VERSION = 1/d' config_flow.py
+ha core restart
+```
+
+### Проблем 2: DNS грешка при инсталация на пакети
 
 ```
 Unable to install package midea-local==6.5.0
