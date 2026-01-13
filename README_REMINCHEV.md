@@ -5,6 +5,7 @@
 **Home Assistant 2026.1.1 премахна `MINOR_VERSION` от ConfigFlow API!**
 
 Ако интеграцията ви спря да работи след обновяване:
+
 ```bash
 cd /config/custom_components/midea_ac_lan
 sed -i '/MINOR_VERSION = 1/d' config_flow.py

@@ -5,6 +5,7 @@
 ### Проблем 1: Интеграцията спира да работи
 
 **Грешка:**
+
 ```
 AttributeError: MINOR_VERSION
 Setup failed for custom integration 'midea_ac_lan'
@@ -13,6 +14,7 @@ Setup failed for custom integration 'midea_ac_lan'
 **Причина:** Home Assistant 2026.1.1 премахна `MINOR_VERSION` от ConfigFlow API.
 
 **Решение:**
+
 ```bash
 cd /config/custom_components/midea_ac_lan
 sed -i '/MINOR_VERSION = 1/d' config_flow.py
